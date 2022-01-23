@@ -21,6 +21,12 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(0)
 public class PermissionSecondAdvice {
+
+
+
+
+
+
     @Pointcut("@annotation(com.mu.demo.annotation.PermissionAnnotation)")
     private void permissionCheck() {
     }
@@ -42,4 +48,6 @@ public class PermissionSecondAdvice {
         }
         return joinPoint.proceed();
     }
+
+
 }

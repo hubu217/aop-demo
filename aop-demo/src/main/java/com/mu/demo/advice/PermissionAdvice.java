@@ -20,6 +20,10 @@ import org.springframework.stereotype.Component;
 @Component
 @Order(1)
 public class PermissionAdvice {
+
+
+
+
     // 定义一个切面
     @Pointcut("@annotation(com.mu.demo.annotation.PermissionAnnotation)")
     private void permissionCheck() {
@@ -42,4 +46,6 @@ public class PermissionAdvice {
         }
         return joinPoint.proceed();
     }
+
+
 }
